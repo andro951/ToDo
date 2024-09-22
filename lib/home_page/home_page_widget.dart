@@ -235,7 +235,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                 : null,
                                           ),
                                           style: FlutterFlowTheme.of(context)
-                                              .labelLarge
+                                              .labelMedium
                                               .override(
                                                 fontFamily: 'Inter',
                                                 letterSpacing: 0.0,
@@ -345,7 +345,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             ),
                                           ),
                                           style: FlutterFlowTheme.of(context)
-                                              .labelLarge
+                                              .labelMedium
                                               .override(
                                                 fontFamily: 'Inter',
                                                 letterSpacing: 0.0,
@@ -453,7 +453,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             ),
                                           ),
                                           style: FlutterFlowTheme.of(context)
-                                              .labelLarge
+                                              .labelMedium
                                               .override(
                                                 fontFamily: 'Inter',
                                                 letterSpacing: 0.0,
@@ -574,7 +574,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                 : null,
                                           ),
                                           style: FlutterFlowTheme.of(context)
-                                              .labelLarge
+                                              .labelMedium
                                               .override(
                                                 fontFamily: 'Inter',
                                                 letterSpacing: 0.0,
@@ -684,7 +684,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             ),
                                           ),
                                           style: FlutterFlowTheme.of(context)
-                                              .labelLarge
+                                              .labelMedium
                                               .override(
                                                 fontFamily: 'Inter',
                                                 letterSpacing: 0.0,

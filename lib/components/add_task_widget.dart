@@ -141,7 +141,7 @@ class _AddTaskWidgetState extends State<AddTaskWidget> {
                   contentPadding:
                       const EdgeInsetsDirectional.fromSTEB(24.0, 26.0, 24.0, 26.0),
                 ),
-                style: FlutterFlowTheme.of(context).labelLarge.override(
+                style: FlutterFlowTheme.of(context).labelMedium.override(
                       fontFamily: 'Inter',
                       letterSpacing: 0.0,
                     ),
@@ -201,7 +201,7 @@ class _AddTaskWidgetState extends State<AddTaskWidget> {
                   contentPadding:
                       const EdgeInsetsDirectional.fromSTEB(24.0, 26.0, 24.0, 26.0),
                 ),
-                style: FlutterFlowTheme.of(context).labelLarge.override(
+                style: FlutterFlowTheme.of(context).labelMedium.override(
                       fontFamily: 'Inter',
                       letterSpacing: 0.0,
                     ),
