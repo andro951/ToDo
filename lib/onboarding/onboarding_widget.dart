@@ -268,7 +268,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                     : null,
                               ),
                               style: FlutterFlowTheme.of(context)
-                                  .labelLarge
+                                  .labelMedium
                                   .override(
                                     fontFamily: 'Inter',
                                     letterSpacing: 0.0,
@@ -372,7 +372,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
 
                         context.goNamed('tasks');
                       },
-                      text: 'Button',
+                      text: 'Complete Profile',
                       options: FFButtonOptions(
                         height: 70.0,
                         padding: const EdgeInsetsDirectional.fromSTEB(

@@ -282,6 +282,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                   fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
+                            maxLines: null,
                             cursorColor:
                                 FlutterFlowTheme.of(context).primaryText,
                             validator: _model.textController2Validator
