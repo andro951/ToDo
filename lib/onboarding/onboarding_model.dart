@@ -14,6 +14,7 @@ class OnboardingModel extends FlutterFlowModel<OnboardingWidget> {
   FocusNode? nameFocusNode;
   TextEditingController? nameTextController;
   String? Function(BuildContext, String?)? nameTextControllerValidator;
+  Color? colorPicked;
   DateTime? datePicked;
 
   @override

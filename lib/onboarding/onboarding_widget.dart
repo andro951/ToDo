@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterflow_colorpicker/flutterflow_colorpicker.dart';
 import 'onboarding_model.dart';
 export 'onboarding_model.dart';
 
@@ -282,6 +283,58 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                           ),
                           FFButtonWidget(
                             onPressed: () async {
+                              final colorPickedColor = await showFFColorPicker(
+                                context,
+                                currentColor: _model.colorPicked ??=
+                                    FlutterFlowTheme.of(context).primary,
+                                showRecentColors: true,
+                                allowOpacity: false,
+                                textColor:
+                                    FlutterFlowTheme.of(context).primaryText,
+                                secondaryTextColor:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                backgroundColor: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                primaryButtonBackgroundColor:
+                                    FlutterFlowTheme.of(context).primary,
+                                primaryButtonTextColor: Colors.white,
+                                primaryButtonBorderColor: Colors.transparent,
+                                displayAsBottomSheet: isMobileWidth(context),
+                              );
+
+                              if (colorPickedColor != null) {
+                                safeSetState(() => _model.colorPicked =
+                                    colorPickedColor.withOpacity(1.0));
+                              }
+                            },
+                            text: 'Set Favorite Color',
+                            icon: const Icon(
+                              Icons.color_lens,
+                              size: 15.0,
+                            ),
+                            options: FFButtonOptions(
+                              width: double.infinity,
+                              height: 70.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 16.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: _model.colorPicked,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .override(
+                                    fontFamily: 'Inter',
+                                    letterSpacing: 0.0,
+                                  ),
+                              elevation: 0.0,
+                              borderSide: BorderSide(
+                                color: FlutterFlowTheme.of(context).black,
+                              ),
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
+                          ),
+                          FFButtonWidget(
+                            onPressed: () async {
                               final datePickedDate = await showDatePicker(
                                 context: context,
                                 initialDate: getCurrentTimestamp,
@@ -368,6 +421,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                             .update(createUsersRecordData(
                           displayName: _model.nameTextController.text,
                           birthday: _model.datePicked,
+                          favoriteColor: _model.colorPicked,
                         ));
 
                         context.goNamed('tasks');

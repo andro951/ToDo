@@ -64,22 +64,24 @@ class _TasksWidgetState extends State<TasksWidget> {
             },
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             elevation: 0.0,
-            child: Container(
-              width: double.infinity,
-              height: double.infinity,
-              decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).primary,
-                borderRadius: BorderRadius.circular(50.0),
-                border: Border.all(
-                  color: FlutterFlowTheme.of(context).black,
-                  width: 1.0,
+            child: AuthUserStreamWidget(
+              builder: (context) => Container(
+                width: double.infinity,
+                height: double.infinity,
+                decoration: BoxDecoration(
+                  color: currentUserDocument?.favoriteColor,
+                  borderRadius: BorderRadius.circular(50.0),
+                  border: Border.all(
+                    color: FlutterFlowTheme.of(context).black,
+                    width: 1.0,
+                  ),
                 ),
-              ),
-              alignment: const AlignmentDirectional(0.0, 0.0),
-              child: Icon(
-                Icons.add_rounded,
-                color: FlutterFlowTheme.of(context).primaryText,
-                size: 30.0,
+                alignment: const AlignmentDirectional(0.0, 0.0),
+                child: Icon(
+                  Icons.add_rounded,
+                  color: FlutterFlowTheme.of(context).primaryText,
+                  size: 30.0,
+                ),
               ),
             ),
           ),

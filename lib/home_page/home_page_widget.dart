@@ -81,7 +81,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(
-                        'assets/images/taskio.png',
+                        'assets/images/ToDo_Icon.png',
                         width: 120.0,
                         fit: BoxFit.contain,
                       ),
